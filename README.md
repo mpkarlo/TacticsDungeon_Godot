@@ -37,10 +37,6 @@ A real-time action role-playing game with a top-down perspective. You control th
 
 - Player
   - Sounds
-  - Abilities
-    - Attack
-    - Block
-  - Health
   - Animations
   - State Machine
     - <https://youtu.be/j_pM3CiQwts>
@@ -59,7 +55,9 @@ A real-time action role-playing game with a top-down perspective. You control th
   - Off-Screen Indicators
 
 - Map
-  - Levels
+  - Level 1
+  - Level 2
+  - Level 3
 
 - Music
   - Overworld
@@ -69,29 +67,36 @@ A real-time action role-playing game with a top-down perspective. You control th
 - Mechanics
   - Action Point System
   - Penalty System
+  - Abilities
+    - Attack
+    - Block
   
 - UI
-  - Health
   - Action Points
   - Ability System
 
-- Camera
-  - Follow Player
-
 ### Doing
 
-- Core and Utilities
-  - Character Node
-    - Character Script
+- Mechanics
+  - Health
 
-- Map
-  - Test Level
-  - Sprites
+- UI
+  - Health
 
 ### Done
 
 - Player
   - Player Movement
   - Sprite
-- Core
+
+- Core and Utilities
+  - Character Node
+    - Character Script
   - State Machine
+
+- Map
+  - Test Level
+  - Sprites
+
+- Camera
+  - Follow Player

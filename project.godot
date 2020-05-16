@@ -9,18 +9,31 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://Scripts/Character.gd"
+}, {
+"base": "Character",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scripts/Player.gd"
+}, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://Scripts/StateMachine.gd"
 } ]
 _global_script_class_icons={
+"Character": "",
+"Player": "",
 "StateMachine": ""
 }
 
 [application]
 
 config/name="TacticsDungeon"
+run/main_scene="res://Scenes/World/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Character/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/0x72_16x16DungeonTileset.v4.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
+
+[node name="Player" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="0"]
+current = true
+
+[node name="Body" parent="." index="2"]
+visible = true
+
+[node name="Sprite" type="Sprite" parent="Body" index="0"]
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 128, 16, 16 )
