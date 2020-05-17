@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0x72_16x16DungeonTileset_walls.v2.png-44fdab894311a8b4fd50ab7a624ba30a.stex"
+path="res://.import/dungeon_tiles.png-910ee60d3c12e1889bf1008197a10bd4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/0x72_16x16DungeonTileset_walls.v2.png"
-dest_files=[ "res://.import/0x72_16x16DungeonTileset_walls.v2.png-44fdab894311a8b4fd50ab7a624ba30a.stex" ]
+source_file="res://Assets/dungeon_tiles.png"
+dest_files=[ "res://.import/dungeon_tiles.png-910ee60d3c12e1889bf1008197a10bd4.stex" ]
 
 [params]
 
