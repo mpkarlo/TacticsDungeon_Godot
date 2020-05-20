@@ -12,28 +12,46 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Character",
 "language": "GDScript",
-"path": "res://Scripts/Character.gd"
+"path": "res://Character/Character.gd"
+}, {
+"base": "Character",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Enemy.gd"
 }, {
 "base": "Character",
 "class": "Player",
 "language": "GDScript",
-"path": "res://Scripts/Player.gd"
+"path": "res://Character/Player.gd"
 }, {
 "base": "Node",
 "class": "StateMachine",
 "language": "GDScript",
 "path": "res://Scripts/StateMachine.gd"
+}, {
+"base": "Weapon",
+"class": "Sword",
+"language": "GDScript",
+"path": "res://Weapons/Sword.gd"
+}, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://Weapons/Weapon.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
+"Enemy": "",
 "Player": "",
-"StateMachine": ""
+"StateMachine": "",
+"Sword": "",
+"Weapon": ""
 }
 
 [application]
 
 config/name="TacticsDungeon"
-run/main_scene="res://Scenes/World/Levels/Level1.tscn"
+run/main_scene="res://World/Levels/Level1.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -12,7 +12,6 @@ export(float) var move_weight = 0.1
 
 onready var state_machine = $StateMachine
 onready var body = $Body
-
 onready var move_speed = move_speed_units * 16
 onready var health = max_health setget _set_health
 
@@ -20,7 +19,7 @@ var velocity = Vector2.ZERO
 var weapon = null
 
 func _ready():
-	pass
+	_set_weapon($SwordDagger)
 
 func _apply_movement():
 	velocity = move_and_slide(velocity)
@@ -37,8 +36,12 @@ func kill():
 	queue_free()
 
 func _update_facing():
-	if velocity.x < 0: # TODO: Test this code. Make sure characters face the right direction.
-		body.get_node("Sprite").flip_h
+	var direction = sign(velocity.x)
+	if direction != 0:
+		body.scale.x = direction
+
+		if weapon != null:
+			weapon.move_weapon(direction)
 
 func is_attacking():
 	if weapon != null:
@@ -61,6 +64,6 @@ func _set_health(value):
 	if health == 0:
 		kill()
 
-#func _set_weapon(value: Weapon):
-#	weapon = value
-#	weapon.aim_at_target(Vector2.RIGHT)
+func _set_weapon(value: Weapon):
+	weapon = value
+	weapon.move_weapon(1) # start weapon facing right

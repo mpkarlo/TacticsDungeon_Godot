@@ -1,6 +1,6 @@
 extends Node2D
 
-const PlayerPS = preload("res://Scenes/Character/Player.tscn")
+const PlayerPS = preload("res://Character/Player.tscn")
 
 onready var spawn_points = $SpawnPoints
 

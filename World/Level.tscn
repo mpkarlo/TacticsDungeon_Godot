@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes/World/TileSets/dungeon.tres" type="TileSet" id=1]
-[ext_resource path="res://Scenes/World/TileSets/decor.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/World/SpawnPoint.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/World/Level.gd" type="Script" id=4]
+[ext_resource path="res://World/TileSets/terrain.tres" type="TileSet" id=1]
+[ext_resource path="res://World/TileSets/decor.tres" type="TileSet" id=2]
+[ext_resource path="res://World/SpawnPoint.gd" type="Script" id=3]
+[ext_resource path="res://World/Level.gd" type="Script" id=4]
+[ext_resource path="res://World/TileSets/transition.tres" type="TileSet" id=5]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
@@ -12,6 +13,11 @@ script = ExtResource( 4 )
 
 [node name="Terrain" type="TileMap" parent="Tilemaps"]
 tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+
+[node name="Transition" type="TileMap" parent="Tilemaps"]
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
