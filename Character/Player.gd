@@ -9,12 +9,19 @@ var is_attacking = false
 var is_alive = true
 var has_control = true
 
+func _ready():
+	_set_weapon($SwordDagger)
+
 func _physics_process(delta):
 	if is_alive && has_control:
 		_handle_move_input()
 		_update_facing()
 #		_move_weapon()
 		_apply_movement()
+
+func _input(event):
+	if event.is_action_pressed("attack"):
+		attack()
 
 func _handle_move_input():
 	var move_direction = Vector2()

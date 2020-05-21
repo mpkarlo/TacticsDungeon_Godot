@@ -9,6 +9,7 @@ export(float) var max_health = 100
 export(float) var max_action_points = 100
 export(float) var move_speed_units = 2
 export(float) var move_weight = 0.1
+export(String) var faction = ""
 
 onready var state_machine = $StateMachine
 onready var body = $Body
@@ -19,7 +20,8 @@ var velocity = Vector2.ZERO
 var weapon = null
 
 func _ready():
-	_set_weapon($SwordDagger)
+	assert(faction != "")
+	add_to_group(faction)
 
 func _apply_movement():
 	velocity = move_and_slide(velocity)
@@ -27,7 +29,7 @@ func _apply_movement():
 func apply_damage(amount):
 	return amount
 
-func perform_attack():
+func attack():
 	if weapon != null:
 		weapon.attack()
 

@@ -10,6 +10,7 @@ export(float) var attack_duration = 0.1
 onready var body = $Body
 
 var is_attacking = false
+var hurtbox
 
 func move_weapon(direction):
 	scale.x = direction
